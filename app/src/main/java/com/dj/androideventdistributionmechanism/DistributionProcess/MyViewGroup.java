@@ -1,4 +1,4 @@
-package com.dj.androideventdistributionmechanism;
+package com.dj.androideventdistributionmechanism.DistributionProcess;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -8,6 +8,8 @@ import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.dj.androideventdistributionmechanism.MainActivity;
 
 public class MyViewGroup extends FrameLayout {
     public MyViewGroup(@NonNull Context context) {
@@ -28,19 +30,19 @@ public class MyViewGroup extends FrameLayout {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        Log.d(MainActivity.TAG, "MyViewGroup: dispatchTouchEvent");
+        Log.d(DistributionProcessActivity.TAG, "MyViewGroup: dispatchTouchEvent");
         return super.dispatchTouchEvent(ev);
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        Log.d(MainActivity.TAG, "MyViewGroup: onInterceptTouchEvent");
+        Log.d(DistributionProcessActivity.TAG, "MyViewGroup: onInterceptTouchEvent");
         return super.onInterceptTouchEvent(ev);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.d(MainActivity.TAG, "MyViewGroup: onTouchEvent");
+        Log.d(DistributionProcessActivity.TAG, "MyViewGroup: onTouchEvent");
         return super.onTouchEvent(event);
     }
 }
