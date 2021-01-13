@@ -13,7 +13,7 @@ public class EventInterceptionActivity extends AppCompatActivity {
     public static final String TAG = "EventInterception";
 
     /**
-     * 拦截后，MyView2中的dispatchTouchEvent方法和onTouchEvent方法都不会被调用到
+     *  拦截后，MyView2中的dispatchTouchEvent方法和onTouchEvent方法都不会被调用到
      *  事件在MyViewGroup2中的onTouchEvent方法中进行了处理
      *  处理完后，return true，下次还会传回MyViewGroup2中进行处理
      *

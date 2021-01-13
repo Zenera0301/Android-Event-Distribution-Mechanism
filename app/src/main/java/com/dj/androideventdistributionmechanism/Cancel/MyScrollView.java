@@ -25,9 +25,23 @@ public class MyScrollView extends ScrollView {
     }
 
     @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        boolean result = super.dispatchTouchEvent(ev);
+        Log.d(CancelActivity.TAG, "MyScrollView: dispatchTouchEvent:"+result);
+        return result;
+    }
+
+    @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         boolean result = super.onInterceptTouchEvent(ev);
         Log.d(CancelActivity.TAG, "MyScrollView: onInterceptTouchEvent:"+result);
+        return result;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent ev) {
+        boolean result = super.onTouchEvent(ev);
+        Log.d(CancelActivity.TAG, "MyScrollView: onTouchEvent:"+result);
         return result;
     }
 }
